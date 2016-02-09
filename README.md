@@ -1,27 +1,50 @@
-Sass Boilerplate for generic CSS/HTML
+Gulp Boilerplate for generic CSS/HTML/JS development
 =============
-Coderiver.com.ua boilerplate.
-
-I'm using this as a starting template for almost any project now.
-It includes sprites, assorted mixins (aka code snippets), file structure, jquery+cycle+scrollto (most usable these days).
-And, that's it.
-
-You need to have Compass installed for it to work properly.
+<a href="http://riverco.de" target="_blank">riverco.de</a> gulp boilerplate.
 
 Structure
 =============
-`/sass/lib/base` - all the mixins and libs needed for us.
+`/src/` - thats where you write code.
 
-`/sass/screen.sass` - agregates all .sass files.
+`/build/` - compiled code. Do not ever edit this folder.
 
-`/sass/main.sass` - styles for the mainpage.
-
-Naming blocks
+What is happening
 =============
-I use BEM naming, meaning `.block` for independent block. `.block__element` for elements inside that block. And `.block_modification` for modification of the block.
+We have two options for building html
+1) `/src/index.html` and `/src/partials/` - for old school HTML.
 
-`layouts.sass` consists of all the columns-header-footer stuff, all with `.l-*` prefixes. So you know its layout.
+2) Optionally one can use `Jade` (it's commented in gulpfile.js). Basic template is in `/src/jade/`
 
-States of the blocks use prefix `.is-*`. For example `.is-running`, `.is-hidden`, `.is-open`.
+_Sass_ is compiled and postprocessed with Autoprefixer. We are using `gulp-ruby-sass`, so don't forget to _install Ruby and Sass_ to use this boilerplate.
 
-Hooks for js should use prefix `.js-*`.
+`src/img/icons` are joined into sprite, which could be used in Sass like this:
+```
+.icon
+    +s(png_name)
+```
+
+`src/img/svg` are joined into icon font, and can be used like this:
+```
+<i class="icon-svg_name"></i>
+```
+
+We are also using simplest include system with `gulp-rigger`, works for javascrpt and html:
+```
+//= partials/partial.html
+```
+
+Naming
+=============
+We use BEM naming, meaning `.block` for independent block. `.block__element` for elements inside that block. And `.block_modification` for modification of the block.
+
+It's noce to name layout blocks with `.l-*` prefixes. So you know it's layout.
+
+States of the blocks use prefix `.is-*`. `.is-running`, `.is-hidden`, `.is-open`.
+
+For javascript hooks we use prefix `.js-*`.
+
+You are welcome
+=============
+Have fun using it, or borrowing some parts. In case of issues or ideas just create them on github. Or write us at <a href="mailto:html@coderiver.com.ua">html@coderiver.com.ua</a>.
+
+gl & hf.
