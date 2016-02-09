@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
-	// go js
+	$('#fullpage').fullpage({
+		menu: '#menu',
+		anchors: ['who', 'what', 'where', 'why'],
+		autoScrolling: true
+	});
 
 });
