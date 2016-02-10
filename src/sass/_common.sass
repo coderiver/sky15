@@ -4,7 +4,7 @@
 // 			+s(codedby) 
 // ## gradient example
 //     	+g(#232323, #5c5c5c);
-//	   horizontal
+//	   horizontal 
 //     	+gh(#232323, #5c5c5c);
 // ## making bw-images
 //     img
@@ -22,31 +22,113 @@
 // 	    	#{$s}
 //				display: none
 // ## fonts
-// Save fonts to /src/fonts
+// Save fonts to /src/fonts 
 // +font(book, cytiapro-black-webfont)
 // and create mixin
 // =book
 // 	font-family: "book", Arial, sans-serif
 
+// fonts
++font(Geometria, Geometria)
+=gr
+	font-family: "Geometria", Arial, sans-serif
+
++font(Geometria-Light, Geometria-Light)
+=gl
+	font-family: "Geometria-Light", Arial, sans-serif
+
++font(Geometria-Bold, Geometria-Bold)
+=gb
+	font-family: "Geometria-Bold", Arial, sans-serif
+	
++font(Geometria-ExtraBold, Geometria-ExtraBold)
+=geb
+	font-family: "Geometria-ExtraBold", Arial, sans-serif
+
+// extends
+.in
+	margin: 0 auto
+	padding: 0 30px 0 40px
+	max-width: 915px
+%in
+	@extend .in
+
+
 body
-	font-family: Arial, sans-serif
-	font-size: 12px
-	line-height: 1.4
+	color: $white 
+	+gr
+	font-size: 18px
+	line-height: 1.2
+	background: url("../img/bg.png") no-repeat 50% 0
+	background-size: cover
+	&.is-who
+		overflow: hidden
+		.wrap
+			background: rgba($yellow, .8) 
+			&:before
+				position: absolute
+				content: ""
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				background: url(../img/who-block.png) no-repeat 0 50%
+				background-size: cover
+		.l-col1
+			width: 44%
 	
 // common blocks
-.out
-	height: 100%
+	
+// greeting
+.greeting
+	padding: 60px 44px 0
+	font-size: 30px
+	&__bold
+		+gb
 
-.section
-	height: 100%
-	+g(red,#fff)
+// logo-big
+.logo-big
+	padding-left: 80px
 
-.header
-	position: fixed
-	top: 0
-	left: 0
-	right: 0
-	height: 30px
-	font-size: 13px
-	background: #fff
-	z-index: 200
+// team
+.team
+	padding: 45px 0
+	min-height: 692px
+
+// face
+.face
+	margin-top: 120px
+
+// nav-name
+.nav-name
+	color: $blue 
+	text-shadow: 1px 1px 0 $yellow
+
+// nav
+.nav
+	margin-top: 22px
+	+gb
+	font-size: 16px
+	text-transform: uppercase
+	li
+		margin-top: 20px
+		display: block
+		&.is-active
+			+geb
+		&:first-child
+			margin-top: 0
+	a
+		color: $blue 
+
+// evidence
+.evidence
+	margin-top: 225px
+
+// name
+.name
+	+geb
+	font-size: 20px
+
+// profession
+.profession
+	margin-top: 8px

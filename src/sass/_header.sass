@@ -1,0 +1,41 @@
+.header
+	position: relative
+	padding-top: 31px
+	min-width: 106px
+	width: 10.4%
+	text-align: center
+	vertical-align: top
+	z-index: 1
+	background: $blue 
+	display: table-cell
+	&__wrap
+		padding-top: 68px
+		margin-top: -72px
+		height: 100%
+		+vertical
+	.menu
+		vertical-align: middle
+		font-size: 14px
+		display: inline-block
+
+// logo
+.logo
+	+s(logo)
+	display: inline-block 
+
+// menu
+.menu
+	+gl
+	text-align: left
+	li
+		margin-top: 15px
+		display: block
+		&.is-active
+			+gb
+		&:hover
+			text-shadow: .5px 0 0 $white, -.5px 0 0 $white
+		&:first-child
+			margin-top: 0
+	a
+		color: $white 
+		transition: text-shadow .1s
