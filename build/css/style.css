@@ -35,25 +35,6 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-skrill:before { content: ""; }
 
-.out { height: 100%; width: 100%; display: inline-table; }
-
-.wrap { height: 100%; vertical-align: top; display: table-cell; }
-
-.l { position: relative; height: 99%; min-height: 99%; z-index: 1; text-align: center; font-size: 0; }
-.l:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
-.l__in { width: 100%; text-align: left; font-size: 18px; vertical-align: middle; display: inline-table; }
-
-.l-col1 { width: 50%; vertical-align: top; display: table-cell; *zoom: 1; }
-.l-col1:after { content: " "; display: table; clear: both; }
-.l-col1 .nav-name, .l-col1 .evidence { width: 47%; vertical-align: top; display: inline-block; }
-.l-col1 .nav-name { width: 43%; }
-
-.l-col2 { width: 50%; vertical-align: top; display: table-cell; }
-
-.title { font-size: 40px; }
-
-.title-middle { font-size: 32px; letter-spacing: -1px; text-transform: uppercase; }
-
 @font-face { font-family: Geometria; src: url("fonts/Geometria.eot"); src: url("fonts/Geometria.eot?#iefix") format("embedded-opentype"), url("fonts/Geometria.woff2") format("woff2"), url("fonts/Geometria.woff") format("woff"), url("fonts/Geometria.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: Geometria-Light; src: url("fonts/Geometria-Light.eot"); src: url("fonts/Geometria-Light.eot?#iefix") format("embedded-opentype"), url("fonts/Geometria-Light.woff2") format("woff2"), url("fonts/Geometria-Light.woff") format("woff"), url("fonts/Geometria-Light.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: Geometria-Bold; src: url("fonts/Geometria-Bold.eot"); src: url("fonts/Geometria-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/Geometria-Bold.woff2") format("woff2"), url("fonts/Geometria-Bold.woff") format("woff"), url("fonts/Geometria-Bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
@@ -65,6 +46,8 @@ body.is-who { overflow: hidden; }
 body.is-who .wrap { background: rgba(252, 255, 42, 0.8); }
 body.is-who .wrap .l { text-align: left; }
 body.is-who .l-col1 { width: 44%; }
+body.is-what .wrap { background-color: rgba(4, 58, 106, 0.68); }
+body.is-what .title-small { padding-left: 40px; }
 
 .greeting { padding: 60px 44px 0; font-size: 30px; }
 .greeting__bold { font-family: "Geometria-Bold", Arial, sans-serif; }
@@ -99,6 +82,33 @@ body.is-who .l-col1 { width: 44%; }
 .outer__in .team { width: 40%; text-align: left; line-height: 1.2; font-size: 18px; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -ms-font-smoothing: antialiased; -o-font-smoothing: antialiased; vertical-align: middle; display: inline-block; }
 .outer__in .nav-name { color: #fff; }
 .outer__in .nav a { color: #fff; }
+
+.projects { margin-top: 30px; overflow: hidden; }
+.projects__in { margin: -1% -1% 0 0; *zoom: 1; }
+.projects__in:after { content: " "; display: table; clear: both; }
+
+.project { float: left; padding-bottom: 25%; margin: 1% 1% 0 0; width: 32%; background-color: #05c6de; background-size: cover; background-repeat: no-repeat; background-position: 0 0; }
+
+.out { height: 100%; width: 100%; display: inline-table; }
+
+.wrap { height: 100%; vertical-align: top; display: table-cell; }
+
+.l { position: relative; height: 99%; min-height: 99%; z-index: 1; text-align: center; font-size: 0; }
+.l:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.l__in { width: 100%; text-align: left; font-size: 18px; vertical-align: middle; display: inline-table; }
+
+.l-col1 { width: 50%; vertical-align: top; display: table-cell; *zoom: 1; }
+.l-col1:after { content: " "; display: table; clear: both; }
+.l-col1 .nav-name, .l-col1 .evidence { width: 47%; vertical-align: top; display: inline-block; }
+.l-col1 .nav-name { width: 43%; }
+
+.l-col2 { width: 50%; vertical-align: top; display: table-cell; }
+
+.title { font-size: 40px; font-family: "Geometria", Arial, sans-serif; }
+
+.title-middle { font-size: 32px; letter-spacing: -1px; text-transform: uppercase; font-family: "Geometria-Bold", Arial, sans-serif; }
+
+.title-small { font-size: 20px; text-transform: uppercase; font-family: "Geometria-Bold", Arial, sans-serif; }
 
 .header { position: relative; padding-top: 31px; min-width: 106px; width: 10.4%; text-align: center; vertical-align: top; z-index: 1; background: #043a6a; display: table-cell; }
 .header__wrap { padding-top: 68px; margin-top: -72px; height: 100%; text-align: center; font-size: 0; }
