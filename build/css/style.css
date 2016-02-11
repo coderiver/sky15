@@ -45,8 +45,8 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .l-col1 { width: 50%; vertical-align: top; display: table-cell; *zoom: 1; }
 .l-col1:after { content: " "; display: table; clear: both; }
-.l-col1 .nav-name, .l-col1 .evidence { width: 48%; vertical-align: top; display: inline-block; }
-.l-col1 .nav-name { width: 40%; }
+.l-col1 .nav-name, .l-col1 .evidence { width: 47%; vertical-align: top; display: inline-block; }
+.l-col1 .nav-name { width: 43%; }
 
 .l-col2 { width: 50%; vertical-align: top; display: table-cell; }
 
@@ -63,7 +63,7 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 body { color: #fff; font-family: "Geometria", Arial, sans-serif; font-size: 18px; line-height: 1.2; background: url("../img/bg.png") no-repeat 50% 0; background-size: cover; }
 body.is-who { overflow: hidden; }
 body.is-who .wrap { background: rgba(252, 255, 42, 0.8); }
-body.is-who .wrap:before { position: absolute; content: ""; top: 0; left: 0; right: 0; bottom: 0; background: url(../img/who-block.png) no-repeat 0 50%; background-size: cover; }
+body.is-who .wrap .l { text-align: left; }
 body.is-who .l-col1 { width: 44%; }
 
 .greeting { padding: 60px 44px 0; font-size: 30px; }
@@ -75,7 +75,7 @@ body.is-who .l-col1 { width: 44%; }
 
 .face { margin-top: 120px; }
 
-.nav-name { color: #043a6a; text-shadow: 1px 1px 0 #fcff2a; }
+.nav-name { color: #043a6a; }
 
 .nav { margin-top: 22px; font-family: "Geometria-Bold", Arial, sans-serif; font-size: 16px; text-transform: uppercase; }
 .nav li { margin-top: 20px; display: block; }
@@ -88,6 +88,17 @@ body.is-who .l-col1 { width: 44%; }
 .name { font-family: "Geometria-ExtraBold", Arial, sans-serif; font-size: 20px; }
 
 .profession { margin-top: 8px; }
+
+.line { position: absolute; top: 50%; left: 50%; -webkit-transform: rotate(-49deg); -ms-transform: rotate(-49deg); transform: rotate(-49deg); margin: -210px 0 0 -50%; height: 420px; width: 100vw; z-index: 1; background: #043a6a; }
+.line:before, .line:after { position: absolute; content: ""; top: 0; height: 420px; width: 100vw; background: #043a6a; }
+.line:before { right: -webkit-calc(100% - 1px); right: calc(100% - 1px); }
+.line:after { left: -webkit-calc(100% - 1px); left: calc(100% - 1px); }
+
+.outer { position: absolute; top: 50%; left: 50%; -webkit-transform: rotate(-49deg); -ms-transform: rotate(-49deg); transform: rotate(-49deg); margin: -210px 0 0 -50%; height: 420px; width: 100vw; overflow: hidden; z-index: 3; }
+.outer__in { position: absolute; padding-left: 10.4%; top: 50%; left: 50%; height: 100vh; width: 100vw; -webkit-transform: rotate(49deg); -ms-transform: rotate(49deg); transform: rotate(49deg); margin: -50vh 0 0 -50vw; }
+.outer__in .team { width: 40%; text-align: left; line-height: 1.2; font-size: 18px; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -ms-font-smoothing: antialiased; -o-font-smoothing: antialiased; vertical-align: middle; display: inline-block; }
+.outer__in .nav-name { color: #fff; }
+.outer__in .nav a { color: #fff; }
 
 .header { position: relative; padding-top: 31px; min-width: 106px; width: 10.4%; text-align: center; vertical-align: top; z-index: 1; background: #043a6a; display: table-cell; }
 .header__wrap { padding-top: 68px; margin-top: -72px; height: 100%; text-align: center; font-size: 0; }

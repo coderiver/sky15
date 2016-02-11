@@ -20,7 +20,7 @@
 //			width: 2em * $i;
 //     @each $s in a,b,c
 // 	    	#{$s}
-//				display: none
+//				display: none 
 // ## fonts
 // Save fonts to /src/fonts 
 // +font(book, cytiapro-black-webfont)
@@ -64,16 +64,9 @@ body
 	&.is-who
 		overflow: hidden
 		.wrap
-			background: rgba($yellow, .8) 
-			&:before
-				position: absolute
-				content: ""
-				top: 0
-				left: 0
-				right: 0
-				bottom: 0
-				background: url(../img/who-block.png) no-repeat 0 50%
-				background-size: cover
+			background: rgba($yellow, .8)
+			.l
+				text-align: left
 		.l-col1
 			width: 44%
 	
@@ -102,7 +95,6 @@ body
 // nav-name
 .nav-name
 	color: $blue 
-	text-shadow: 1px 1px 0 $yellow
 
 // nav
 .nav
@@ -132,3 +124,60 @@ body
 // profession
 .profession
 	margin-top: 8px
+
+// line
+.line
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: rotate(-49deg)
+	margin: -210px 0 0 -50%
+	height: 420px
+	width: 100vw
+	z-index: 1
+	background: $blue 
+	&:before,
+	&:after
+		position: absolute
+		content: ""
+		top: 0
+		height: 420px
+		width: 100vw
+		background: $blue 
+	&:before
+		right: calc(100% - 1px)
+	&:after
+		left: calc(100% - 1px)
+
+// outer
+.outer
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: rotate(-49deg)
+	margin: -210px 0 0 -50%
+	height: 420px
+	width: 100vw
+	overflow: hidden
+	z-index: 3
+	&__in
+		position: absolute
+		padding-left: 10.4%
+		top: 50%
+		left: 50%
+		height: 100vh
+		width: 100vw
+		transform: rotate(49deg)
+		margin: -50vh 0 0 -50vw
+		.team
+			width: 40%
+			text-align: left
+			line-height: 1.2
+			font-size: 18px
+			+font-smoothing(antialiased)
+			vertical-align: middle
+			display: inline-block
+		.nav-name
+			color: $white 
+		.nav a 
+			color: $white
