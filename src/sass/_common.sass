@@ -56,8 +56,10 @@
 
 body
 	color: $white 
+	min-width: 1020px
+	min-height: 700px
 	+gr
-	font-size: 18px
+	font-size: 0
 	line-height: 1.2
 	background: url("../img/bg.png") no-repeat 50% 0
 	background-size: cover
@@ -205,3 +207,43 @@ body
 	background-size: cover
 	background-repeat: no-repeat
 	background-position: 0 0
+
+// contacts
+.contacts
+	height: 100%
+	min-height: 100%
+	width: 100%
+	display: table
+	.contact,
+	.map
+		width: 50%
+		height: 100%
+		min-height: 100%
+		vertical-align: top
+		display: table-cell
+
+// contact
+.contact
+	+vertical
+	.title-average
+		margin-bottom: 18px
+	&__wrap
+		margin-top: 30px
+		width: 100%
+		vertical-align: middle
+		display: inline-block
+	&__in
+		margin: 0 auto
+		padding: 0 20px
+		text-align: left
+		line-height: 1.3
+		font-size: 18px
+		max-width: 340px
+
+// map
+.map
+	.gm-style
+		a,
+		a + span
+			display: none !important
+			
