@@ -1,7 +1,8 @@
 $icons: (0:0)
-$icons: map-merge($icons,(codedby: (X: -57px, Y:-9px, W: 47px, H: 5px, TW: 106px, TH: 58px, IMG: '../img/icons.png')))
-$icons: map-merge($icons,(coderiver: (X: -57px, Y:0px, W: 49px, H: 5px, TW: 106px, TH: 58px, IMG: '../img/icons.png')))
-$icons: map-merge($icons,(logo: (X: 0px, Y:0px, W: 53px, H: 58px, TW: 106px, TH: 58px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(codedby: (X: 0px, Y:-71px, W: 47px, H: 5px, TW: 84px, TH: 76px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(coderiver: (X: 0px, Y:-62px, W: 49px, H: 5px, TW: 84px, TH: 76px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(logo: (X: 0px, Y:0px, W: 53px, H: 58px, TW: 84px, TH: 76px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(mouse: (X: -57px, Y:0px, W: 27px, H: 41px, TW: 84px, TH: 76px, IMG: '../img/icons.png')))
 
 
 // Gets an attribute from the sass map
@@ -20,8 +21,8 @@ $icons: map-merge($icons,(logo: (X: 0px, Y:0px, W: 53px, H: 58px, TW: 106px, TH:
 	background-image: url(icon-attr($iconName, IMG))
 	$width: icon-attr($iconName, W)
 	$height: icon-attr($iconName, H)
-	width: $width/2
-	height: $height/2
+	width: ceil($width/2)
+	height: ceil($height/2)
 	$x: icon-attr($iconName, X)
 	$y: icon-attr($iconName, Y)
 	background-position: $x/2 $y/2
@@ -42,17 +43,23 @@ $icons: map-merge($icons,(logo: (X: 0px, Y:0px, W: 53px, H: 58px, TW: 106px, TH:
 //	width: 47px
 //	height: 5px
 //	background-image: url('../img/icons.png')
-//	background-position: -57px -9px
+//	background-position: 0px -71px
 //
 //.icon-coderiver
 //	width: 49px
 //	height: 5px
 //	background-image: url('../img/icons.png')
-//	background-position: -57px 0px
+//	background-position: 0px -62px
 //
 //.icon-logo
 //	width: 53px
 //	height: 58px
 //	background-image: url('../img/icons.png')
 //	background-position: 0px 0px
+//
+//.icon-mouse
+//	width: 27px
+//	height: 41px
+//	background-image: url('../img/icons.png')
+//	background-position: -57px 0px
 //

@@ -2,13 +2,38 @@
 	height: 100%
 	width: 100%
 	display: inline-table
+	+r(768)
+		display: block
 
 // wrap
-.wrap
+.section
+	padding-left: 106px
 	height: 100%
 	vertical-align: top
 	display: table-cell
 	+clr
+	+r(768)
+		padding-left: 0
+		height: auto
+		display: block
+	&.is-home
+		+r(768)
+			.l
+				padding-bottom: 86px
+	&.is-what
+		background-color: rgba($blue, .68)
+		.title-small
+			padding-left: 40px
+			+r(768)
+				display: none
+	&.is-who
+		position: relative
+		overflow: hidden
+		background: rgba($yellow, .8)
+		.l
+			text-align: left
+		.l-col1
+			width: 44%
 
 // l
 .l
@@ -18,19 +43,26 @@
 	min-height: 100% 
 	z-index: 1
 	+vertical
+	+r(768)
+		height: auto
+		min-height: auto
 	&__in
 		width: 100%
 		text-align: left
 		font-size: 18px
 		vertical-align: middle 
 		display: inline-table
+		+r(768)
+			padding: 34px 0 85px
 
 // l-col1
 .l-col1
 	width: 50%
 	vertical-align: top
-	display: table-cell
+	display: table-cell 
 	+clr
+	+r(768)
+		width: 51%
 	.nav-name,
 	.evidence
 		width: 47%
@@ -60,6 +92,8 @@
 	font-size: 30px 
 	line-height: 1.2
 	+gr
+	+r(768)
+		font-size: 15px
 
 .title-small
 	font-size: 20px

@@ -26,8 +26,8 @@ $icons: map-merge($icons,({{name}}: (X: {{px.offset_x}}, Y:{{px.offset_y}}, W: {
 	background-image: url(icon-attr($iconName, IMG))
 	$width: icon-attr($iconName, W)
 	$height: icon-attr($iconName, H)
-	width: $width/2
-	height: $height/2
+	width: ceil($width/2)
+	height: ceil($height/2)
 	$x: icon-attr($iconName, X)
 	$y: icon-attr($iconName, Y)
 	background-position: $x/2 $y/2

@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $('#map').each(function() {
+    $('#map').each(function() { 
         function initialize() {
             var myLatlng = {lat: 50.439475, lng: 30.527451 };
 
@@ -27,25 +27,10 @@ $(document).ready(function() {
          var castum = [
                 {
                     "featureType": "all",
-                    "elementType": "labels.text",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "all",
                     "elementType": "labels.text.fill",
                     "stylers": [
                         {
-                            "saturation": "35"
-                        },
-                        {
-                            "color": "#333333"
-                        },
-                        {
-                            "lightness": 40
+                            "color": "#ffffff"
                         }
                     ]
                 },
@@ -54,22 +39,10 @@ $(document).ready(function() {
                     "elementType": "labels.text.stroke",
                     "stylers": [
                         {
-                            "visibility": "off"
+                            "color": "#000000"
                         },
                         {
-                            "color": "#ffffff"
-                        },
-                        {
-                            "lightness": 16
-                        }
-                    ]
-                },
-                {
-                    "featureType": "all",
-                    "elementType": "labels.icon",
-                    "stylers": [
-                        {
-                            "visibility": "off"
+                            "lightness": 13
                         }
                     ]
                 },
@@ -78,10 +51,7 @@ $(document).ready(function() {
                     "elementType": "geometry.fill",
                     "stylers": [
                         {
-                            "color": "#ffffff"
-                        },
-                        {
-                            "lightness": 20
+                            "color": "#000000"
                         }
                     ]
                 },
@@ -90,34 +60,22 @@ $(document).ready(function() {
                     "elementType": "geometry.stroke",
                     "stylers": [
                         {
-                            "color": "#fefefe"
+                            "color": "#144b53"
                         },
                         {
-                            "lightness": 17
+                            "lightness": 14
                         },
                         {
-                            "weight": 1.2
+                            "weight": 1.4
                         }
                     ]
                 },
                 {
                     "featureType": "landscape",
-                    "elementType": "geometry",
+                    "elementType": "all",
                     "stylers": [
                         {
-                            "color": "#f5f5f5"
-                        },
-                        {
-                            "lightness": 20
-                        }
-                    ]
-                },
-                {
-                    "featureType": "landscape.man_made",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#e6e6e6"
+                            "color": "#08304b"
                         }
                     ]
                 },
@@ -126,19 +84,10 @@ $(document).ready(function() {
                     "elementType": "geometry",
                     "stylers": [
                         {
-                            "color": "#f5f5f5"
+                            "color": "#0c4152"
                         },
                         {
-                            "lightness": 21
-                        }
-                    ]
-                },
-                {
-                    "featureType": "poi.park",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#dadada"
+                            "lightness": 5
                         }
                     ]
                 },
@@ -147,10 +96,7 @@ $(document).ready(function() {
                     "elementType": "geometry.fill",
                     "stylers": [
                         {
-                            "color": "#acacac"
-                        },
-                        {
-                            "lightness": 17
+                            "color": "#000000"
                         }
                     ]
                 },
@@ -159,25 +105,19 @@ $(document).ready(function() {
                     "elementType": "geometry.stroke",
                     "stylers": [
                         {
-                            "lightness": 29
+                            "color": "#0b434f"
                         },
                         {
-                            "weight": 0.2
-                        },
-                        {
-                            "color": "#ffffff"
+                            "lightness": 25
                         }
                     ]
                 },
                 {
                     "featureType": "road.arterial",
-                    "elementType": "geometry",
+                    "elementType": "geometry.fill",
                     "stylers": [
                         {
-                            "color": "#bcbcbc"
-                        },
-                        {
-                            "lightness": 18
+                            "color": "#000000"
                         }
                     ]
                 },
@@ -186,16 +126,7 @@ $(document).ready(function() {
                     "elementType": "geometry.stroke",
                     "stylers": [
                         {
-                            "color": "#f3f3f3"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road.local",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#ffffff"
+                            "color": "#0b3d51"
                         },
                         {
                             "lightness": 16
@@ -204,25 +135,7 @@ $(document).ready(function() {
                 },
                 {
                     "featureType": "road.local",
-                    "elementType": "geometry.stroke",
-                    "stylers": [
-                        {
-                            "color": "#d7d7d7"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "transit.line",
-                    "elementType": "geometry.fill",
-                    "stylers": [
-                        {
-                            "color": "#ffffff"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "transit.station.airport",
-                    "elementType": "labels.icon",
+                    "elementType": "geometry",
                     "stylers": [
                         {
                             "color": "#000000"
@@ -230,32 +143,20 @@ $(document).ready(function() {
                     ]
                 },
                 {
-                    "featureType": "transit.station.bus",
-                    "elementType": "labels.icon",
+                    "featureType": "transit",
+                    "elementType": "all",
                     "stylers": [
                         {
-                            "color": "#ff0000"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "transit.station.rail",
-                    "elementType": "labels.icon",
-                    "stylers": [
-                        {
-                            "color": "#000000"
+                            "color": "#146474"
                         }
                     ]
                 },
                 {
                     "featureType": "water",
-                    "elementType": "geometry",
+                    "elementType": "all",
                     "stylers": [
                         {
-                            "color": "#989898"
-                        },
-                        {
-                            "lightness": 17
+                            "color": "#021019"
                         }
                     ]
                 }
