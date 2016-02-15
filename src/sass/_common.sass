@@ -90,15 +90,18 @@ body
 // team
 .team
 	padding: 45px 0
-	min-height: 692px
+	min-height: 640px
+	+r(768)
+		padding: 0
+		min-height: 100%
 
-// face
-.face
-	margin-top: 120px
 
 // nav-name
 .nav-name
 	color: $blue 
+	+r(960)
+		.title-middle
+			display: none
 
 // nav
 .nav
@@ -106,19 +109,45 @@ body
 	+gb
 	font-size: 16px
 	text-transform: uppercase
+	+r(768)
+		margin-top: 0
+		text-shadow: 1px 0 0 rgba($yellow, .8), 0 1px 0 rgba($yellow, .8), -1px 0 0 rgba($yellow, .8), 0 -1px 0 rgba($yellow, .8) 
 	li
 		margin-top: 20px
 		display: block
+		+r(768)
+			margin-top: 15px
 		&.is-active
 			+geb
 		&:first-child
 			margin-top: 0
 	a
 		color: $blue 
+		+r(768)
+			padding: 2px 1px 1px
 
 // evidence
 .evidence
-	margin-top: 225px
+	float: left
+	width: 34%
+	margin-top: 270px
+	+r(900)
+		margin-top: 240px
+	+r(768)
+		margin-top: 80px
+// face
+.face
+	float: right
+	margin-top: 120px
+	width: 66%
+	+r(768)
+		margin-top: 30px
+	
+.evidence,
+.face
+	+r(768)
+		float: none
+		width: 100%
 
 // name
 .name
@@ -140,6 +169,9 @@ body
 	width: 100vw
 	z-index: 1
 	background: $blue 
+	+r(768)
+		margin-top: -61px
+		height: 220px
 	&:before,
 	&:after
 		position: absolute
@@ -148,10 +180,22 @@ body
 		height: 420px
 		width: 100vw
 		background: $blue 
+		+r(768)
+			height: 220px
 	&:before
 		right: calc(100% - 1px)
 	&:after
 		left: calc(100% - 1px)
+
+// line-arr
+.line-arr
+	position: absolute
+	bottom: 0
+	left: 50%
+	margin-left: -120px
+	+s(line-arr)
+	+r(768)
+		margin-left: 0
 
 // outer
 .outer
@@ -164,6 +208,10 @@ body
 	width: 100vw
 	overflow: hidden
 	z-index: 3
+	+r(768)
+		margin-top: -61px
+		height: 220px
+		z-index: 0
 	&__in
 		position: absolute
 		padding-left: 106px
@@ -173,6 +221,8 @@ body
 		width: 100vw
 		transform: rotate(49deg)
 		margin: -50vh 0 0 -50vw
+		+r(768)
+			display: none
 		.team
 			width: 40%
 			text-align: left
@@ -265,7 +315,7 @@ body
 // map
 .map 
 	+r(768)
-		margin-top: 33px
+		margin-top: 30px
 	.gm-style
 		a,
 		a + span

@@ -30,10 +30,19 @@
 		position: relative
 		overflow: hidden
 		background: rgba($yellow, .8)
+		+r(768)
+			// background: rgba($yellow, .8) url("../img/who-block.png") no-repeat 50% 0
+			// background-size: 100% 100%
 		.l
 			text-align: left
 		.l-col1
-			width: 44%
+			width: 164px
+			+r(768)
+				width: 50%
+		.l-col2
+			width: calc(100% - 164px) 
+			+r(768)
+				width: 50%
 
 // l
 .l
@@ -61,21 +70,13 @@
 	vertical-align: top
 	display: table-cell 
 	+clr
-	+r(768)
-		width: 51%
-	.nav-name,
-	.evidence
-		width: 47%
-		vertical-align: top
-		display: inline-block
-	.nav-name
-		width: 43%
 
 // l-col2
 .l-col2
 	width: 50%
 	vertical-align: top
 	display: table-cell
+	+clr
 
 // tittle
 .title
