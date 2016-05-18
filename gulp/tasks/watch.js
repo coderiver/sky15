@@ -21,6 +21,9 @@ gulp.task('build', ['html','font','sprite','copy','js','sass'], function() {});
 
 
 gulp.task('deploy', function () {
-  return gulp.src('build/**/*')
+  return gulp.src([
+      'build/**/*',
+      'CNAME'
+  ])
       .pipe(ghPages());
 });
