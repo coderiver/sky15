@@ -1,5 +1,6 @@
 .header
 	position: fixed
+	top: 0
 	height: 100%
 	padding-top: 31px
 	width: 106px
@@ -61,8 +62,6 @@
 			margin-top: 20px
 			&:first-child
 				margin-top: 0
-		&.is-active
-			+gb
 		&:hover
 			text-shadow: .5px 0 0 $white, -.5px 0 0 $white
 		&:first-child
@@ -70,6 +69,8 @@
 	a
 		color: $white 
 		transition: text-shadow .1s
+		&.active
+			+gb
 
 // btn-menu
 .btn-menu
