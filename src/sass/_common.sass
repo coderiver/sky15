@@ -61,11 +61,15 @@ body
 	+gr
 	font-size: 0
 	line-height: 1.2
-	background: url("../img/bg.png") no-repeat 50% 0
-	//+hdpi
-	//	background: url("../img/bg-2x.png") no-repeat 50% 0
+	background: url("../img/bg.png") 50% 0
 	background-size: cover
+	background-repeat: no-repeat
 	background-attachment: fixed
+	+hdpi
+		background: url("../img/bg-large.jpeg") 0 0
+		background-size: cover
+		background-repeat: no-repeat
+		background-attachment: fixed
 	&.is-hidden
 		overflow: hidden
 
